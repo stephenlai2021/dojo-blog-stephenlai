@@ -15,7 +15,7 @@ export default {
 
   css: ['~assets/global.css'],
 
-  plugins: ['~/plugins/firebase-config'],
+  // plugins: ['~/plugins/firebase-config'],
 
   components: true,
 
