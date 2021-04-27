@@ -14,9 +14,9 @@ const firebaseConfig = {
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig)
 }
-// else {
-//   firebase.app()
-// }
+else {
+  firebase.app()
+}
 
 const projectFirestore = firebase.firestore()
 const timestamp = firebase.firestore.FieldValue.serverTimestamp
