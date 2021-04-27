@@ -22,7 +22,7 @@
 
 <script>
 import { ref, useRouter } from '@nuxtjs/composition-api'
-import { firestore, timestamp } from '~/plugins/firebase-config'
+import { projectFirestore, timestamp } from '~/plugins/firebase-config'
 
 export default {
   setup() {
@@ -41,7 +41,7 @@ export default {
         createdAt: timestamp()
       }
 
-      const res = await firestore.collection('dojo-blog-posts').add(post)
+      const res = await projectFirestore.collection('dojo-blog-posts').add(post)
       console.log(res)
 
       router.push('/')
