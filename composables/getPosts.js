@@ -1,5 +1,6 @@
 import { ref } from '@nuxtjs/composition-api'
-import { firestore } from '../plugins/firebase-config'
+// import { projectFirestore } from '../plugins/firebase-config'
+import { projectFirestore } from '../firebase/config'
 
 const getPosts = () => {
   const posts = ref([])
@@ -7,7 +8,7 @@ const getPosts = () => {
 
   const load = async () => {
     try {
-      const res = await firestore.collection('dojo-blog-posts').orderBy('createdAt', 'desc').get()
+      const res = await projectFirestore.collection('dojo-blog-posts').orderBy('createdAt', 'desc').get()
       // console.log(res.docs)
       posts.value = res.docs.map(doc => {
         // console.log(doc.data())

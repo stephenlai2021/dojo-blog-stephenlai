@@ -19,7 +19,8 @@ export default {
 
   components: true,
 
-  buildModules: ['@nuxtjs/composition-api/module', '@nuxtjs/dotenv'],
+  // buildModules: ['@nuxtjs/composition-api/module', '@nuxtjs/dotenv'],
+  buildModules: ['@nuxtjs/composition-api/module'],
 
   modules: ['@nuxtjs/pwa'],
 

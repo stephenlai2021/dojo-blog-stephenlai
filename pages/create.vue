@@ -22,7 +22,8 @@
 
 <script>
 import { ref, useRouter } from '@nuxtjs/composition-api'
-import { projectFirestore, timestamp } from '~/plugins/firebase-config'
+// import { projectFirestore, timestamp } from '~/plugins/firebase-config'
+import { projectFirestore, timestamp } from '../firebase/config'
 
 export default {
   setup() {

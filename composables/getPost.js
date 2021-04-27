@@ -1,5 +1,6 @@
 import { ref } from '@nuxtjs/composition-api'
-import { firestore } from '../plugins/firebase-config'
+// import { projectFirestore } from '../plugins/firebase-config'
+import { projectFirestore } from '../firebase/config'
 
 const getPost = id => {
   const post = ref(null)
@@ -7,7 +8,7 @@ const getPost = id => {
 
   const load = async () => {
     try {
-      const res = await firestore.collection('dojo-blog-posts').doc(id).get()
+      const res = await projectFirestore.collection('dojo-blog-posts').doc(id).get()
 
       if (!res.exists) {
         throw Error('That post doest not exist')

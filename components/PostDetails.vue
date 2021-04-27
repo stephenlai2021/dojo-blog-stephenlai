@@ -16,7 +16,8 @@
 
 <script>
 import { useRouter } from '~/node_modules/@nuxtjs/composition-api/dist'
-import { projectFirestore } from '~/plugins/firebase-config'
+// import { projectFirestore } from '~/plugins/firebase-config'
+import { projectFirestore } from '../firebase/config'
 import getPost from '../composables/getPost'
 
 export default {
