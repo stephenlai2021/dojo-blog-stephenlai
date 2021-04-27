@@ -18,10 +18,10 @@ if (!firebase.apps.length) {
 //   firebase.app()
 // }
 
-const firestore = firebase.firestore()
+const projectFirestore = firebase.firestore()
 const timestamp = firebase.firestore.FieldValue.serverTimestamp
 
-export { firestore, timestamp }
+export { projectFirestore, timestamp }
 
 
 

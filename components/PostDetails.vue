@@ -16,7 +16,7 @@
 
 <script>
 import { useRouter } from '~/node_modules/@nuxtjs/composition-api/dist'
-import { firestore } from '~/plugins/firebase-config'
+import { projectFirestore } from '~/plugins/firebase-config'
 import getPost from '../composables/getPost'
 
 export default {
@@ -28,7 +28,7 @@ export default {
     load()
 
     const handleDelete = async () => {
-      await firestore.collection('dojo-blog-posts').doc(id).delete()
+      await projectFirestore.collection('dojo-blog-posts').doc(id).delete()
 
       router.push('/')
     }
