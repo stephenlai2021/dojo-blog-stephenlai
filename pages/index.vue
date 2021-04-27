@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h1>Home</h1>
-    <!-- <div v-if="error">{{ error }}</div> -->
+    <div v-if="error">{{ error }}</div>
     <div v-if="posts.length" class="layout">
       <PostList :posts="posts" />
       <TagCloud :posts="posts" />
@@ -14,27 +14,27 @@
 
 <script>
 import getPosts from '../composables/getPosts'
-import { projectFirestore } from '../firebase/config'
+// import { projectFirestore } from '../firebase/config'
 
 export default {
-  async asyncData() {
-    const res = await projectFirestore
-      .collection('dojo-blog-posts')
-      .orderBy('createdAt', 'desc')
-      .get()
+  // async asyncData() {
+  //   const res = await projectFirestore
+  //     .collection('dojo-blog-posts')
+  //     .orderBy('createdAt', 'desc')
+  //     .get()
 
-    const posts = res.docs.map((doc) => {
-      return { ...doc.data(), id: doc.id }
-    })
+  //   const posts = res.docs.map((doc) => {
+  //     return { ...doc.data(), id: doc.id }
+  //   })
 
-    return { posts }
-  },
-
-  // setup() {
-  //   const { posts, error, load } = getPosts()
-  //   load()
-  //   return { posts, error }
+  //   return { posts }
   // },
+
+  setup() {
+    const { posts, error, load } = getPosts()
+    load()
+    return { posts, error }
+  },
 }
 </script>
 
