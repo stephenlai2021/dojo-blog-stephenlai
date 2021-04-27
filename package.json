@@ -8,7 +8,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "backend": "json-server --watch data/db.json --port 8080",
-    "push": "git add . && git commit -m commit && git push origin main"
+    "push": "git add . && git commit -m commit && git push origin master"
   },
   "dependencies": {
     "@nuxtjs/composition-api": "^0.23.1",
