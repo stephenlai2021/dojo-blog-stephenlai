@@ -1,0 +1,17 @@
+:root {
+  --primary: #ff8800;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+}
