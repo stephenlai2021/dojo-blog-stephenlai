@@ -45,7 +45,8 @@ export default {
   font-size: 26px;
   color: white;
   margin-bottom: 10px;
-  max-width: 400px;
+  max-width: 800px;
+  margin: 10px auto 30px auto;
 }
 .post h3::before {
   content: '';
