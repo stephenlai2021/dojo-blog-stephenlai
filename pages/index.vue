@@ -9,11 +9,8 @@
     <div v-else>
       <Spinner />
     </div>
-
   </div>
 </template>
-
-
 
 <script>
 import getPosts from '../composables/getPosts'
@@ -42,5 +39,10 @@ export default {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 20px;
+}
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
